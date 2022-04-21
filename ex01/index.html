@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nav</title>
+
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/8049297440.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="nav">
+    <ul>
+      <li class="list active">
+        <a href="">
+          <span class="icon"><i class="fa-solid fa-house-chimney"></i></span>
+          <span class="txt">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="">
+          <span class="icon"><i class="fa-solid fa-user"></i></span>
+          <span class="txt">Profile</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="">
+          <span class="icon"><i class="fa-solid fa-comment"></i></span>
+          <span class="txt">Mesaage</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="">
+          <span class="icon"><i class="fa-solid fa-camera"></i></span>
+          <span class="txt">Photos</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="">
+          <span class="icon"><i class="fa-solid fa-gear"></i></span>
+          <span class="txt">Setting</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+  <script>
+    const nav = document.querySelector('.nav')
+    const list = document.querySelectorAll('.list');
+    function activeLink(event){
+      event.preventDefault(); 
+      list.forEach((item) => 
+      item.classList.remove('active'));
+      this.classList.add('active');
+    }
+    list.forEach((item) => 
+    item.addEventListener('click',activeLink));
+  </script>
+</body>
+</html>
